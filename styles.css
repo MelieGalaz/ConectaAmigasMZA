@@ -1,3 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Sedan:ital@0;1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
 
+body {
+  height: 100vh;
+  background-image: url(imagenes/fondo1.png);
+  min-width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  object-position: bottom;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer h2 {
+  color: #e3961b;
+  font-size: 1rem;
+  text-align: center;
+}
+
+nav button {
+  border: none;
+  background-color: #e3961b;
+  padding: 5px;
+  font-family: "Sedan";
+  border-radius: 10px;
+  color: white;
+  font-size: 0.7rem;
+}
+nav button:hover {
+  background-color: #da9089;
+}
+nav div {
+  display: flex;
+  align-items: center;
+}
+nav div img {
+  width: 4rem;
+  height: 100%;
+}
+nav div h1 {
+  font-size: 1rem;
+  color: #a55631;
+  font-family: "Lora";
+}
+
+header section {
+  margin-top: 20px;
+}
+header section form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+header section form select {
+  border: none;
+  background-color: #da9089;
+}
+header section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+header section div button {
+  border: none;
+  background-color: #e3961b;
+  padding: 2px 6px;
+  font-family: "Sedan";
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+header section div button:hover {
+  background-color: #da9089;
+}
+
+.contenedor-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-card .card {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  gap: 20px;
+}
+.contenedor-card .card .nombre {
+  font-size: "Lora";
+  color: #a55631;
+}
+.contenedor-card .card .contenedor-imagen img {
+  width: 15rem;
+  height: auto;
+}
+.contenedor-card .card h3 {
+  font-size: 1rem;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #73252f;
+}
+.contenedor-card .card .datos {
+  display: flex;
+  gap: 20px;
+}
+.contenedor-card .card .datos p {
+  background-color: #a04d45;
+  padding: 2px 3px;
+  color: white;
+  border-radius: 5px;
+}
+.contenedor-card .card .contenedor-card-botones {
+  display: flex;
+  gap: 20px;
+}
+.contenedor-card .card .contenedor-card-botones .boton-card {
+  border: none;
+  background-color: #e3961b;
+  padding: 2px 4px;
+  font-family: "Sedan";
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+}
+.contenedor-card .card .contenedor-card-botones .boton-card:hover {
+  background-color: #da9089;
+}
 
 /*# sourceMappingURL=styles.css.map */

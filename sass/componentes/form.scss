@@ -1,0 +1,36 @@
+header {
+  section {
+    margin-top: 20px;
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      select {
+        border: none;
+        background-color: $color-hover-boton;
+      }
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      button {
+        border: none;
+        background-color: $color-cuarto;
+        padding: 2px 6px;
+        font-family: $font-secundario;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.8rem;
+        margin-top: 10px;
+
+        &:hover {
+          background-color: $color-hover-boton;
+        }
+      }
+    }
+  }
+}

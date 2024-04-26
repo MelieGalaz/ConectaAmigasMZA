@@ -1,0 +1,27 @@
+nav {
+  button {
+    border: none;
+    background-color: $color-cuarto;
+    padding: 5px;
+    font-family: $font-secundario;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.7rem;
+    &:hover {
+      background-color: $color-hover-boton;
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    img {
+      width: 4rem;
+      height: 100%;
+    }
+    h1 {
+      font-size: $font-regular;
+      color: $color-titulos;
+      font-family: $font-principal;
+    }
+  }
+}

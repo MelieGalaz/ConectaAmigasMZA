@@ -1,0 +1,62 @@
+.contenedor-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    gap: 20px;
+
+    .nombre {
+      font-size: $font-principal;
+      color: $color-titulos;
+    }
+    .contenedor-imagen {
+      img {
+        width: 15rem;
+        height: auto;
+      }
+    }
+    h3 {
+      font-size: $font-regular;
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $color-secundarios;
+    }
+    .datos {
+      display: flex;
+      gap: 20px;
+      p {
+        background-color: $color-boton;
+        padding: 2px 3px;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+    .contenedor-card-botones {
+      display: flex;
+      gap: 20px;
+      .boton-card {
+        border: none;
+        background-color: $color-cuarto;
+        padding: 2px 4px;
+        font-family: $font-secundario;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.9rem;
+        &:hover {
+          background-color: $color-hover-boton;
+        }
+      }
+    }
+  }
+}
