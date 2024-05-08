@@ -1,11 +1,8 @@
 body {
-  height: 100vh;
-  background-image: url(imagenes/fondo1.png);
+  min-height: 100vh;
   min-width: 100%;
   display: flex;
-  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: space-between;
-  background-size: cover;
-  object-position: bottom;
+  background-color: #fff4ed;
 }

@@ -1,36 +1,46 @@
-header {
-  section {
-    margin-top: 20px;
+.form-header {
+  padding-block: 10px;
+  background-color: #fff4ed;
 
-    form {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      select {
-        border: none;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    select {
+      border: none;
+      background-color: $color-hover-boton;
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    button {
+      border: none;
+      background-color: $color-cuarto;
+      padding: 2px 6px;
+      font-family: $font-secundario;
+      border-radius: 10px;
+      color: white;
+      font-size: 0.8rem;
+      margin-top: 10px;
+
+      &:hover {
         background-color: $color-hover-boton;
       }
     }
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      button {
-        border: none;
-        background-color: $color-cuarto;
-        padding: 2px 6px;
-        font-family: $font-secundario;
-        border-radius: 10px;
-        color: white;
-        font-size: 0.8rem;
-        margin-top: 10px;
+  }
+}
 
-        &:hover {
-          background-color: $color-hover-boton;
-        }
-      }
-    }
+#spinner {
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  display: none;
+  img {
+    width: 150px;
   }
 }

@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/cd76ad0e9d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
     <title>AmigasMZA</title>
   </head>
   <body>
     <header>
       <nav>
         <div>
-          <img src="imagenes/logo.png" alt="dos chicas abrazadas" />
+          <img src="./imagenes/logo.png" alt="dos chicas abrazadas" />
           <h1>Conecta Amigas MZA</h1>
         </div>
         <button>Agregar Perfil</button>
       </nav>
-      <section>
+      <section class="form-header">
         <form>
           <select name="" id="">
             <option value="">Departamento</option>
@@ -46,35 +50,133 @@
         </div>
       </section>
     </header>
+    <!-- <span class="loader">Loading</span> -->
+    <div id="spinnerContainer"><img src="./imagenes/gato.gif" alt="" /></div>
     <main>
-      <section>
+      <section class="contenedor-tarjetas">
         <div class="contenedor-card">
-          <div class="card">
-            <h2 class="nombre">nombre</h2>
-            <div class="contenedor-imagen">
-              <img src="imagenes/fondo1.png" alt="" />
+          <h2 class="nombre"></h2>
+          <div class="contenedor-imagen">
+            <img src="" alt="" />
+          </div>
+          <h3></h3>
+          <div class="datos">
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="contenedor-botones">
+            <button class="boton-info"></button>
+          </div>
+        </div>
+      </section>
+      <div class="contenedor-modal">
+        <div class="modal">
+          <div id="modal" class="modal-info-card">
+            <div class="modal__header">
+              <span id="close" class="close">
+                <i class="far fa-times-circle"></i>
+              </span>
             </div>
-            <h3>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
-              omnis, amet numquam earum consequatur eligendi soluta et neque
-              consequuntur aliquid id quo provident, eum doloribus ad eveniet
-              necessitatibus error libero.
-            </h3>
-            <div class="datos">
+            <h2 class="modal-nombre">nombre</h2>
+            <div class="modal-contenedor-imagen">
+              <img src="./imagenes/fondo1.png" alt="" />
+            </div>
+            <h3></h3>
+            <div class="modal-datos">
               <p>hobbies</p>
               <p>edad</p>
               <p>Departamento</p>
             </div>
-            <div class="contenedor-card-botones">
-              <button class="boton-card">editar</button>
-              <button class="boton-card">eliminar</button>
+            <div class="contenedor-modal-botones">
+              <button class="boton-editar">Editar</button>
+              <button class="boton-eliminar">Eliminar</button>
             </div>
           </div>
+        </div>
+      </div>
+      <section class="nuevoPerfil">
+        <div>
+          <form action="">
+            <h2>Nuevo Perfil</h2>
+            <label for="">Nombre</label>
+            <input type="text" name="" id="" />
+            <label for="">Foto</label>
+            <input type="text" name="" id="" />
+            <label for="">Descripción</label>
+            <input type="text" />
+
+            <select name="" id="">
+              <option value="">Hobbies</option>
+              <option value="Hacer caminatas">Hacer caminatas</option>
+              <option value="Bailar tango">Bailar tango</option>
+              <option value="Hacer yoga">Hacer yoga</option>
+              <option value="Jugar video juegos">Jugar video juegos</option>
+            </select>
+            <select name="" id="">
+              <option value="">Edad</option>
+              <option value="28">28 años</option>
+              <option value="29">29 años</option>
+              <option value="30">30 años</option>
+              <option value="31">31 años</option>
+              <option value="32">32 años</option>
+            </select>
+            <select name="" id="">
+              <option value="">Departamento</option>
+              <option value="Godoy Cruz">Godoy Cruz</option>
+              <option value="Las Heras">Las Heras</option>
+              <option value="Guaymallén">Guaymallén</option>
+              <option value="Maipú">Maipú</option>
+            </select>
+          </form>
+        </div>
+      </section>
+      <section class="editar">
+        <div>
+          <form id="editar-amigas" data-amiga-id="">
+            <h2>Editar</h2>
+            <label for="editar-nombre">Nombre</label>
+            <input type="text" name="" id="editar-nombre" />
+            <label for="editar-foto">Foto</label>
+            <input type="text" name="" id="editar-foto" />
+            <label for="editar-descripcion">Descripción</label>
+            <input type="text" id="editar-descripcion" />
+
+            <select name="" id="editar-hobbies">
+              <option value="">Hobbies</option>
+              <option value="Hacer caminatas">Hacer caminatas</option>
+              <option value="Bailar tango">Bailar tango</option>
+              <option value="Hacer yoga">Hacer yoga</option>
+              <option value="Jugar video juegos">Jugar video juegos</option>
+            </select>
+            <select name="" id="editar-edad">
+              <option value="">Edad</option>
+              <option value="28">28 años</option>
+              <option value="29">29 años</option>
+              <option value="30">30 años</option>
+              <option value="31">31 años</option>
+              <option value="32">32 años</option>
+            </select>
+            <select name="" id="editar-departamento">
+              <option value="">Departamento</option>
+              <option value="Godoy Cruz">Godoy Cruz</option>
+              <option value="Las Heras">Las Heras</option>
+              <option value="Guaymallén">Guaymallén</option>
+              <option value="Maipú">Maipú</option>
+            </select>
+
+            <div class="editar-botones">
+              <button class="editar-amiga">Editar</button>
+              <button class="cancelar-editar">Cancelar</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
     <footer>
       <h2>© Melie Galaz 2024</h2>
     </footer>
+    <script src="./script/fetch.js"></script>
+    <script src="./script/put.js"></script>
   </body>
 </html>

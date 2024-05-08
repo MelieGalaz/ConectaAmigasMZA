@@ -1,0 +1,83 @@
+.contenedor-modal {
+  display: none;
+  .modal {
+    display: flex;
+    flex-direction: column;
+    margin-block: 30px;
+    .modal-info-card {
+      width: 20rem;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5e9c5;
+      gap: 20px;
+      padding: 15px;
+      border-width: 20px; /* Ancho del borde */
+      border-image-source: url("imagenes/fondo4.webp"); /* Ruta de la imagen del borde */
+      border-image-slice: 20; /* Cantidad de la imagen que se usará para el borde */
+      border-image-repeat: round;
+      box-shadow: 8px 5px 9px rgba(1, 5, 0, 0.2);
+
+      .close {
+        color: #aaa;
+        margin-left: 200px;
+        font-size: 28px;
+        font-weight: bold;
+
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .modal-nombre {
+        font-size: $font-mediano;
+        color: $color-titulos;
+      }
+      .modal-contenedor-imagen {
+        img {
+          width: 10rem;
+          height: 10rem;
+          object-fit: contain;
+        }
+      }
+      h3 {
+        font-size: $font-regular;
+        width: 250px;
+        text-align: center;
+        color: $color-secundarios;
+      }
+      .modal-datos {
+        display: flex;
+        gap: 20px;
+        p {
+          background-color: $color-boton;
+          padding: 2px 3px;
+          color: white;
+          border-radius: 5px;
+          font-size: $font-pequeno;
+          text-align: center;
+        }
+      }
+      .contenedor-modal-botones {
+        display: flex;
+        gap: 20px;
+        button {
+          border: none;
+          background-color: $color-cuarto;
+          padding: 2px 4px;
+          font-family: $font-secundario;
+          border-radius: 10px;
+          color: white;
+          font-size: 0.9rem;
+          &:hover {
+            background-color: $color-hover-boton;
+          }
+        }
+      }
+    }
+  }
+}
