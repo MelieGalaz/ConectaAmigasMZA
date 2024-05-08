@@ -51,7 +51,7 @@ const editarAmiga = (amigaId, newData) => {
         } else {
           console.log("Error al actualizar la tarjeta");
         }
-      }, 5000);
+      }, 2000);
     })
     .catch((err) => console.log(err));
 };

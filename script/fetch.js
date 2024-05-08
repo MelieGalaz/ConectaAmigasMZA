@@ -2,20 +2,21 @@ const card = document.querySelector(".contenedor-card");
 const modalInfoCard = document.querySelector(".contenedor-modal");
 const closeButton = document.querySelector(".close");
 const contenedorTarjetas = document.querySelector(".contenedor-tarjetas");
-
+const mainContenedor = document.getElementById("mainContenedor");
 const spinnerContainer = document.getElementById("spinnerContainer");
 const baseUrl = "https://6621b66027fcd16fa6c7be3b.mockapi.io/amigas/amigas";
 
 const mostrarSpinner = () => {
   if (spinnerContainer) {
     spinnerContainer.style.display = "block";
+    mainContenedor.style.display = "none";
   }
 };
 
-// Función para ocultar el spinner
 const ocultarSpinner = () => {
   if (spinnerContainer) {
     spinnerContainer.style.display = "none";
+    mainContenedor.style.display = "block";
   }
 };
 
@@ -33,7 +34,7 @@ const getAmigas = (fetchUrl) => {
       setTimeout(() => {
         ocultarSpinner();
         generarCard(data);
-      }, 5000);
+      }, 2000);
     })
     .catch((err) => console.log(err));
 };
@@ -105,14 +106,18 @@ card.addEventListener("click", (event) => {
         setTimeout(() => {
           ocultarSpinner();
           abrirModal(amiga);
-        }, 5000);
+        }, 2000);
       })
       .catch((error) => console.error("Error al obtener la amiga:", error));
   }
 });
 
 closeButton.addEventListener("click", () => {
-  modalInfoCard.style.display = "none";
-  modal.style.display = "none";
-  contenedorTarjetas.style.display = "block";
+  mostrarSpinner();
+  setTimeout(() => {
+    ocultarSpinner();
+    modalInfoCard.style.display = "none";
+    modal.style.display = "none";
+    contenedorTarjetas.style.display = "block";
+  }, 2000); // 2000 milisegundos = 2 segundos
 });
