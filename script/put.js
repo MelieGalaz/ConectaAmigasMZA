@@ -46,7 +46,8 @@ const editarAmiga = (amigaId, newData) => {
             <div class="contenedor-card-botones">
               <button class="boton-info" >Ver más</button>
             </div>
-          </div>`;
+          </div>
+      `;
           cardToUpdate.outerHTML = newCardHtml;
         } else {
           console.log("Error al actualizar la tarjeta");

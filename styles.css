@@ -106,6 +106,7 @@ nav div h1 {
   height: 100%;
   display: flex;
   margin: 0 auto;
+  display: none;
 }
 #spinnerContainer img {
   width: 150px;
@@ -295,6 +296,52 @@ nav div h1 {
 }
 .nuevoPerfil div form select {
   background-color: #da9089;
+}
+
+.contenedor-modal-eliminar {
+  display: none;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  border: 1px solid black;
+  background-color: #f5e9c5;
+  border-width: 20px; /* Ancho del borde */
+  border-image-source: url("imagenes/fondo4.webp"); /* Ruta de la imagen del borde */
+  border-image-slice: 20; /* Cantidad de la imagen que se usará para el borde */
+  border-image-repeat: round;
+  box-shadow: 8px 5px 9px rgba(1, 5, 0, 0.2);
+  margin-block: 30px;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil p {
+  color: #73252f;
+  font-weight: 800;
+  font-size: 1em;
+  text-align: center;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil .contenedor-botones-eliminar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil .contenedor-botones-eliminar .boton {
+  border: none;
+  background-color: #e3961b;
+  padding: 2px 4px;
+  font-family: "Sedan";
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil .contenedor-botones-eliminar .boton:hover {
+  background-color: #da9089;
+}
+.contenedor-modal-eliminar .modal-eliminar-perfil .contenedor-botones-eliminar .eliminar {
+  background-color: rgb(126, 58, 58);
 }
 
 .editar {

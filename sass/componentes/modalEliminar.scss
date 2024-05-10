@@ -1,0 +1,47 @@
+.contenedor-modal-eliminar {
+  display: none;
+  .modal-eliminar-perfil {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid black;
+    background-color: #f5e9c5;
+    border-width: 20px; /* Ancho del borde */
+    border-image-source: url("imagenes/fondo4.webp"); /* Ruta de la imagen del borde */
+    border-image-slice: 20; /* Cantidad de la imagen que se usará para el borde */
+    border-image-repeat: round;
+    box-shadow: 8px 5px 9px rgba(1, 5, 0, 0.2);
+    margin-block: 30px;
+
+    p {
+      color: $color-secundarios;
+      font-weight: 800;
+      font-size: $font-regular;
+      text-align: center;
+    }
+    .contenedor-botones-eliminar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .boton {
+        border: none;
+
+        background-color: $color-cuarto;
+        padding: 2px 4px;
+        font-family: $font-secundario;
+        border-radius: 10px;
+        color: white;
+        font-size: 0.9rem;
+        &:hover {
+          background-color: $color-hover-boton;
+        }
+      }
+      .eliminar {
+        background-color: rgb(126, 58, 58);
+      }
+    }
+  }
+}

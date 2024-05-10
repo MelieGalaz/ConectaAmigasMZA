@@ -58,14 +58,14 @@ const generarCard = (data) => {
               <button class="boton-info" >Ver más</button>
             </div>
             
-          </div>`;
+          </div> `;
     })
     .join("");
 
   document.querySelectorAll(".boton-info").forEach((button) => {
     button.addEventListener("click", (event) => {
       const cardId = event.target.closest(".card").id;
-      console.log(cardId);
+
       const selectedAmiga = data.find((amiga) => amiga.id === cardId);
       fillEditForm(selectedAmiga);
     });
@@ -80,7 +80,6 @@ const abrirModal = (amiga) => {
   const modalDatos = document.querySelector(".modal-datos");
   const botonEditar = document.querySelector(".boton-editar");
   const botonEliminar = document.querySelector(".boton-eliminar");
-  console.log(botonEditar);
   modalNombre.textContent = amiga.name;
   modalImagen.src = amiga.urlImagen;
   modalH3.textContent = amiga.description;
@@ -119,5 +118,5 @@ closeButton.addEventListener("click", () => {
     modalInfoCard.style.display = "none";
     modal.style.display = "none";
     contenedorTarjetas.style.display = "block";
-  }, 2000); // 2000 milisegundos = 2 segundos
+  }, 2000);
 });
