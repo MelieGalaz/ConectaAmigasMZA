@@ -1,55 +1,44 @@
 .editar {
+  display: flex;
+  margin: 0 auto;
   display: none;
-  div {
-    display: flex;
-    margin: 0 auto;
-    form {
-      width: 20rem;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 10px;
-      border: 1px solid black;
-      background-color: #f5e9c5;
-      border-width: 20px; /* Ancho del borde */
-      border-image-source: url("imagenes/fondo4.webp"); /* Ruta de la imagen del borde */
-      border-image-slice: 20; /* Cantidad de la imagen que se usará para el borde */
-      border-image-repeat: round;
-      box-shadow: 8px 5px 9px rgba(1, 5, 0, 0.2);
-      margin-bottom: 30px;
-      h2 {
-        text-align: center;
-        color: $color-titulos;
-        font-size: $font-mediano;
-      }
-      label {
-        color: $color-secundarios;
-        font-size: $font-regular;
-      }
-      input {
-        border: none;
-        padding: 3px 5px;
-        background-color: $color-hover-boton;
-      }
-      select {
-        background-color: $color-hover-boton;
-      }
-    }
+  form {
+    @include card-base;
+    border-image-source: url("imagenes/fondo4.webp");
 
-    .editar-botones {
-      display: flex;
-      gap: 20px;
-      button {
-        border: none;
-        background-color: $color-cuarto;
-        padding: 2px 4px;
-        font-family: $font-secundario;
-        border-radius: 10px;
-        color: white;
-        font-size: 0.9rem;
-        &:hover {
-          background-color: $color-hover-boton;
-        }
+    h2 {
+      text-align: center;
+      color: $color-titulos;
+      font-size: $font-mediano;
+    }
+    label {
+      color: $color-secundarios;
+      font-size: $font-regular;
+    }
+    input {
+      border: none;
+      padding: 3px 5px;
+      background-color: $color-hover-boton;
+    }
+    select {
+      background-color: $color-hover-boton;
+    }
+  }
+
+  .editar-botones {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    button {
+      border: none;
+      background-color: $color-cuarto;
+      padding: 2px 4px;
+      font-family: $font-secundario;
+      border-radius: 10px;
+      color: white;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: $color-hover-boton;
       }
     }
   }

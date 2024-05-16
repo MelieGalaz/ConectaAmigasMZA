@@ -1,0 +1,13 @@
+.cerrar {
+  color: #848beb;
+  margin-right: 150px;
+  font-size: 0.6em;
+  font-weight: bold;
+
+  .cerrar:hover,
+  .cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

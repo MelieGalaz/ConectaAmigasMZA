@@ -1,4 +1,8 @@
 .form-header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 10px;
   padding-block: 10px;
   background-color: #fff4ed;
 
@@ -11,6 +15,10 @@
     select {
       border: none;
       background-color: $color-hover-boton;
+      @include breakpoint(md) {
+        width: 13rem;
+        height: 1.5rem;
+      }
     }
   }
   div {
@@ -18,24 +26,10 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    button {
-      border: none;
-      background-color: $color-cuarto;
-      padding: 2px 6px;
-      font-family: $font-secundario;
-      border-radius: 10px;
-      color: white;
-      font-size: 0.8rem;
-      margin-top: 10px;
-
-      &:hover {
-        background-color: $color-hover-boton;
-      }
-    }
   }
 }
 
-#spinnerContainer {
+#spinnerContenedor {
   height: 100%;
   display: flex;
   margin: 0 auto;

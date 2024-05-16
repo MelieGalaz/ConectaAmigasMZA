@@ -1,5 +1,7 @@
 @import "sass/base/fonts.scss";
 @import "sass/base/reset.scss";
+@import "sass/base/responsive.scss";
+@import "sass/base/mixin.scss";
 @import "sass/base/theme.scss";
 @import "sass/layout/body.scss";
 @import "sass/layout/header.scss";
@@ -12,6 +14,7 @@
 @import "sass/componentes/formPerfilNuevo.scss";
 @import "sass/componentes/modalEliminar.scss";
 @import "sass/componentes/editar.scss";
+@import "sass/base/cerrar.scss";
 
 main {
   margin: 0 auto;

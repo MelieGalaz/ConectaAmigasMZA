@@ -1,28 +1,29 @@
 const card = document.querySelector(".contenedor-card");
 const modalInfoCard = document.querySelector(".contenedor-modal");
-const closeButton = document.querySelector(".close");
+const cerrarBoton = document.querySelector(".cerrar");
 const contenedorTarjetas = document.querySelector(".contenedor-tarjetas");
 const mainContenedor = document.getElementById("mainContenedor");
-const spinnerContainer = document.getElementById("spinnerContainer");
+const spinnerContenedor = document.getElementById("spinnerContenedor");
 const baseUrl = "https://6621b66027fcd16fa6c7be3b.mockapi.io/amigas/amigas";
 
 const mostrarSpinner = () => {
-  if (spinnerContainer) {
-    spinnerContainer.style.display = "block";
+  if (spinnerContenedor) {
+    spinnerContenedor.style.display = "block";
     mainContenedor.style.display = "none";
   }
 };
 
 const ocultarSpinner = () => {
-  if (spinnerContainer) {
-    spinnerContainer.style.display = "none";
+  if (spinnerContenedor) {
+    spinnerContenedor.style.display = "none";
     mainContenedor.style.display = "block";
   }
 };
 
-const getAmigas = (fetchUrl) => {
+const getAmigas = (fetchUrl, filters) => {
   mostrarSpinner();
-  fetch(fetchUrl)
+  const urlParams = new URLSearchParams(filters);
+  fetch(`${fetchUrl}?${urlParams.toString()}`)
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -111,7 +112,7 @@ card.addEventListener("click", (event) => {
   }
 });
 
-closeButton.addEventListener("click", () => {
+cerrarBoton.addEventListener("click", () => {
   mostrarSpinner();
   setTimeout(() => {
     ocultarSpinner();

@@ -1,0 +1,11 @@
+@mixin breakpoint($class) {
+  @if $class == md {
+    @media (min-width: 970px) {
+      @content;
+    }
+  } @else if $class == desktop {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+}

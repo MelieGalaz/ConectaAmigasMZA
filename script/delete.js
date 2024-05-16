@@ -5,6 +5,7 @@ const contenedorModalEliminar = document.querySelector(
 const confirmarEliminar = document.getElementById("confirmar-eliminar");
 botonEliminar.addEventListener("click", () => {
   contenedorModalEliminar.style.display = "block";
+  modalInfoCard.style.display = "none";
 });
 
 document.getElementById("cancelar-eliminar").addEventListener("click", () => {

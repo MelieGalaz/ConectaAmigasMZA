@@ -1,0 +1,14 @@
+@mixin card-base {
+  width: 20rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f5e9c5;
+  gap: 15px;
+  padding: 15px;
+  border-width: 20px;
+  border-image-slice: 20;
+  border-image-repeat: round;
+  box-shadow: 8px 5px 9px rgba(1, 5, 0, 0.2);
+}
