@@ -29,7 +29,7 @@ document.getElementById("confirmar-eliminar").addEventListener("click", () => {
       res
         .json()
         .then((data) => {
-          getAmigas(baseUrl);
+          getAmigas(baseUrl, {});
         })
         .catch((err) => console.log(err));
     }, 2000)

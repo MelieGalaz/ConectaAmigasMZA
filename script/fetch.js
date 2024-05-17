@@ -20,10 +20,10 @@ const ocultarSpinner = () => {
   }
 };
 
-const getAmigas = (fetchUrl, filters) => {
+const getAmigas = (baseUrl, filters) => {
   mostrarSpinner();
   const urlParams = new URLSearchParams(filters);
-  fetch(`${fetchUrl}?${urlParams.toString()}`)
+  fetch(`${baseUrl}?${urlParams.toString()}`)
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -72,8 +72,8 @@ const generarCard = (data) => {
     });
   });
 };
-getAmigas(baseUrl);
 
+getAmigas(baseUrl, {});
 const abrirModal = (amiga) => {
   const modalNombre = document.querySelector(".modal-nombre");
   const modalImagen = document.querySelector(".modal-contenedor-imagen img");

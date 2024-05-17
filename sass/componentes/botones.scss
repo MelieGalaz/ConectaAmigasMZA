@@ -6,6 +6,7 @@
   border-radius: 10px;
   color: white;
   font-size: $font-pequeno;
+  cursor: pointer;
   @include breakpoint(md) {
     font-size: $font-regular;
   }

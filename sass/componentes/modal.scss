@@ -9,10 +9,14 @@
       border-image-source: url("./imagenes/fondo4.webp");
       align-items: center;
       justify-content: center;
+      .modal__header {
+        cursor: pointer;
+      }
       .modal-nombre {
         font-size: $font-mediano;
         color: $color-titulos;
       }
+
       .modal-contenedor-imagen {
         img {
           width: 10rem;

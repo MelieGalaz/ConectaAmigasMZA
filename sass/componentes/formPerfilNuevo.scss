@@ -24,6 +24,9 @@
     select {
       background-color: $color-hover-boton;
     }
+    .mensaje-error {
+      display: none;
+    }
     .contenedor-botones-nuevoPerfil {
       gap: 20px;
       display: flex;
