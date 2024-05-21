@@ -32,10 +32,15 @@ const getAmigas = (baseUrl, filters) => {
       }
     })
     .then((data) => {
-      setTimeout(() => {
+      if (data) {
+        setTimeout(() => {
+          ocultarSpinner();
+          generarCard(data);
+        }, 2000);
+      } else {
         ocultarSpinner();
-        generarCard(data);
-      }, 2000);
+        card.innerHTML = "No se encontraron amigas";
+      }
     })
     .catch((err) => console.log(err));
 };
